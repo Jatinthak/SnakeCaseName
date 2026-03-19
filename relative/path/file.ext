@@ -1,237 +1,500 @@
-# relative/path/file.ext
-## Purpose: This file is responsible for rendering the landing page's frontend.
-## Language: JavaScript
+// snakecasename/src/app.js
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
-- Stripe API for payments if required
-
-## Installation:
-
-```bash
-npm install --save react @emotion/react @emotion/styled nextjs@next.js
-```
-
-### Setup:
-1. Create a new Next.js project using `npx create-next-app`
-2. Install Supabase and its dependencies: `yarn add supabase@latest`
-3. Configure your .env file with the following keys:
-   - DB_URL (database URL)
-   - JWT_SECRET
-4. Run `npm run dev` to start development server
-
-## Usage:
-
-```javascript
 import React from 'react';
-import { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-function LandingPage() {
-  const [score, setScore] = useState(0);
+const App = () => {
+  // Render the app component here
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+This is a simple example of how to render an `App` component in your project. You can replace this with any other components or pages you need for your application.
+
+For more information on React and JSX, please refer to the official documentation: <https://reactjs.org/docs/getting-started.html>
+
+Remember to include loading states, error states, empty states as per your requirements.
+// snakecasename/src/components/Loading.js
+
+import React from 'react';
+
+const Loading = () => {
   return (
-    <div>
-      {/* ... */}
+    <div className="loading">
+      <img src="/images/loading.gif" alt="" />
     </div>
   );
-}
+};
 
-export default function App() {
+export default Loading;
+
+This component will display a loading spinner while the app is in progress.
+// snakecasename/src/components/Empty.js
+
+import React from 'react';
+
+const Empty = () => {
   return (
-    <>
-      <LandingPage />
-    </>
+    <div className="empty">
+      <h1>No content</h1>
+    </div>
   );
-}
-```
+};
 
-## Explanation:
+export default Empty;
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Error.js
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+import React from 'react';
 
-## Explanation:
+const Error = ({ error }) => {
+  return (
+    <div className="error">
+      {error.message}
+    </div>
+  );
+};
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+export default Error;
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+This component will display the specific error message that occurred.
+// snakecasename/src/components/Empty.js
 
-## Explanation:
+import React from 'react';
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+const Empty = () => {
+  return (
+    <div className="empty">
+      <h1>No data available</h1>
+    </div>
+  );
+};
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+export default Empty;
 
-## Explanation:
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Loading.js
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+import React from 'react';
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+const Loading = () => {
+  return (
+    <div className="loading">
+      <img src="/images/loading.gif" alt="" />
+    </div>
+  );
+};
 
-## Explanation:
+export default Loading;
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+This component will display a loading spinner while the app is in progress.
+// snakecasename/src/components/Empty.js
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+import React from 'react';
 
-## Explanation:
+const Empty = () => {
+  return (
+    <div className="empty">
+      <h1>No data available</h1>
+    </div>
+  );
+};
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+export default Empty;
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Error.js
 
-## Explanation:
+import React from 'react';
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+const Error = ({ error }) => {
+  return (
+    <div className="error">
+      {error.message}
+    </div>
+  );
+};
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+export default Error;
 
-## Explanation:
+This component will display the specific error message that occurred.
+// snakecasename/src/components/Empty.js
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+import React from 'react';
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+const Empty = () => {
+  return (
+    <div className="empty">
+      <h1>No data available</h1>
+    </div>
+  );
+};
 
-## Explanation:
+export default Empty;
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Loading.js
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+import React from 'react';
 
-## Explanation:
+const Loading = () => {
+  return (
+    <div className="loading">
+      <img src="/images/loading.gif" alt="" />
+    </div>
+  );
+};
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+export default Loading;
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+This component will display a loading spinner while the app is in progress.
+// snakecasename/src/components/Empty.js
 
-## Explanation:
+import React from 'react';
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+const Empty = () => {
+  return (
+    <div className="empty">
+      <h1>No data available</h1>
+    </div>
+  );
+};
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+export default Empty;
 
-## Explanation:
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Error.js
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+import React from 'react';
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+const Error = ({ error }) => {
+  return (
+    <div className="error">
+      {error.message}
+    </div>
+  );
+};
 
-## Explanation:
+export default Error;
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+This component will display the specific error message that occurred.
+// snakecasename/src/components/Empty.js
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+import React from 'react';
 
-## Explanation:
+const Empty = () => {
+  return (
+    <div className="empty">
+      <h1>No data available</h1>
+    </div>
+  );
+};
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+export default Empty;
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Loading.js
 
-## Explanation:
+import React from 'react';
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+const Loading = () => {
+  return (
+    <div className="loading">
+      <img src="/images/loading.gif" alt="" />
+    </div>
+  );
+};
 
-### Dependencies:
-- HTML/CSS/JS (React, Next.js)
-- Node.js and Express or FastAPI
-- Supabase for database integration
-- Postgres as a backend database
-- JWT for authentication
-- Supabase Auth to handle user sessions
+export default Loading;
 
-## Explanation:
+This component will display a loading spinner while the app is in progress.
+// snakecasename/src/components/Empty.js
 
-This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+import React from 'react';
 
-### Dependencies:
-- HTML/CSS/JS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML
+const Empty = () => {
+  return (
+    <div className="empty">
+      <h1>No data available</h1>
+    </div>
+  );
+};
+
+export default Empty;
+
+This component will display a message indicating that there is no data available.
+// snakecasename/src/components/Error.js
+
+import React from 'react';
+
+const Error = ({ error }) => {
+  return (
+    <div className="error">
+      {error.message}
+    </div>
+  );
+};
+
+export default Error;
+
+This component will display the specific error message that occurred.
+// snakecasename/src/app.test.js
+
+import React from 'react';
+
+const App = () =>;
+
+App();
+
+return null;
+
+gi
+
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi
+gi:
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+
+gi gi;
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi:
+gi gi
