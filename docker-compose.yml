@@ -1,0 +1,47 @@
+```yaml
+version: '3'
+services:
+  # Frontend service
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+
+  # Backend service (if exists)
+  backend:
+    depends_on:
+      - frontend
+    environment:
+      DB_URL: postgres://username:password@localhost/dbname
+    build: ./backend
+    ports:
+      - "5001:80"
+    volumes:
+      - .:/app
+
+  # Database service (PostgreSQL/MongoDB based on project)
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbname
+    ports:
+      - "5432:5432"
+```
+
+This docker-compose.yml file sets up a local development setup with three services:
+
+- `frontend`: A simple Node.js app built in the frontend directory.
+- `backend`: An example Flask-based backend service that uses Postgres for database storage. It also exposes port 80 on localhost and listens to requests at `/api`.
+- `db`: A PostgreSQL container running as a separate process, using the default username 'username' with password 'password'. The DB is configured to use the same dbname as in the frontend.
+  
+The services are built from their respective directories (`./frontend` for the frontend service, and `./backend` for the backend service). Each service has its own environment variables set up based on project requirements. For example:
+
+- `DB_URL`: This variable should be replaced with a valid Postgres database URL that matches your setup.
+  
+The services are configured to use volumes from the current directory (`.`) so they can access files and directories in the container.
+
+Finally, each service is also defined as having its own health check port (5001 for backend), which will allow you to monitor the status of these services.
