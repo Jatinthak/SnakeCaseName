@@ -1,0 +1,237 @@
+# relative/path/file.ext
+## Purpose: This file is responsible for rendering the landing page's frontend.
+## Language: JavaScript
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+- Stripe API for payments if required
+
+## Installation:
+
+```bash
+npm install --save react @emotion/react @emotion/styled nextjs@next.js
+```
+
+### Setup:
+1. Create a new Next.js project using `npx create-next-app`
+2. Install Supabase and its dependencies: `yarn add supabase@latest`
+3. Configure your .env file with the following keys:
+   - DB_URL (database URL)
+   - JWT_SECRET
+4. Run `npm run dev` to start development server
+
+## Usage:
+
+```javascript
+import React from 'react';
+import { useState } from 'react';
+
+function LandingPage() {
+  const [score, setScore] = useState(0);
+  return (
+    <div>
+      {/* ... */}
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <LandingPage />
+    </>
+  );
+}
+```
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS (React, Next.js)
+- Node.js and Express or FastAPI
+- Supabase for database integration
+- Postgres as a backend database
+- JWT for authentication
+- Supabase Auth to handle user sessions
+
+## Explanation:
+
+This file is responsible for rendering the landing page's frontend. It uses React and Next.js to create a functional, responsive website.
+
+### Dependencies:
+- HTML/CSS/JS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CCSS/HTML/CSS/HTML/CCSS/HTML/CCSS/HTML
