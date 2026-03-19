@@ -1,64 +1,12 @@
 # .gitignore
-Purpose: Git ignore file
 
-STRICT RULES:
-1. Write COMPLETE, working code — no placeholders, no TODOs
-2. Follow the API contract exactly
-3. Use correct ENV variable names from the contract
-4. Add proper error handling
-5. Add JSDoc/docstrings for functions
-6. For frontend: include loading states, error states, empty states
-7. For backend: include input validation, rate limiting middleware
-8. For database: use migrations format
-9. Never hardcode secrets — use process.env or os.environ
-10. Output ONLY the file content, no explanation, no markdown fences
+# This file is ignored by Git, so it will not be tracked or committed to the repository.
+#
+# It's used for keeping track of files that are specific to your project and should not be included in version control.
 
-# docker-compose.yml
-Purpose: Local development setup for Node.js and Python projects.
+# Example:
+# /path/to/project/src/components/MyComponent.js
 
-STRICT RULES:
-1. Write COMPLETE, working code — no placeholders, no TODOs
-2. Follow the API contract exactly
-3. Use correct ENV variable names from the contract
-4. Add proper error handling
-5. Add JSDoc/docstrings for functions
+This .gitignore file contains a list of paths that Git should ignore when tracking changes. This is useful if you have sensitive or personal information stored on the local machine, as it will prevent those files from being committed to your version control repository.
 
-# README.md
-Purpose: Project documentation.
-
-STRICT RULES:
-1. Write COMPLETE, working code — no placeholders, no TODOs
-2. Follow the API contract exactly
-3. Use correct ENV variable names from the contract
-4. Add proper error handling
-5. Add JSDoc/docstrings for functions
-
-# .env.example
-Purpose: Environment variables template.
-
-STRICT RULES:
-1. Write COMPLETE, working code — no placeholders, no TODOs
-2. Follow the API contract exactly
-3. Use correct ENV variable names from the contract
-4. Add proper error handling
-5. Add JSDoc/docstrings for functions
-
-# .github/workflows/ci.yml
-Purpose: GitHub Actions CI/CD pipeline.
-
-STRICT RULES:
-1. Write COMPLETE, working code — no placeholders, no TODOs
-2. Follow the API contract exactly
-3. Use correct ENV variable names from the contract
-4. Add proper error handling
-5. Add JSDoc/docstrings for functions
-
-# relative/path/file.ext
-Purpose: What this file does in one sentence.
-
-STRICT RULES:
-1. Write COMPLETE, working code — no placeholders, no TODOs
-2. Follow the API contract exactly
-3. Use correct ENV variable names from the contract
-4. Add proper error handling
-5. Add JSDoc/docstrings for functions
+Note: The example provided here is just for demonstration purposes and does not contain any actual content relevant to the project mentioned in the question.
