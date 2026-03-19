@@ -1,0 +1,31 @@
+version: '3'
+services:
+  # Frontend service
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+
+  # Backend service (if exists)
+  backend:
+    depends_on:
+      - frontend
+    environment:
+      DB_URL: postgres://username:password@localhost/dbname
+    build: ./backend
+    ports:
+      - "5001:80"
+    volumes:
+      - .:/app
+
+  # Database service (PostgreSQL/MongoDB based on project)
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbname
+    ports:
+      - "5432:5432"
