@@ -1,71 +1,83 @@
-# SnakeCaseName Project: Landing Page Game
-## Overview
+# Project: SnakeCaseName
+## Description
 
-SnakeCaseName is a simple snake game built for the landing page. It uses HTML, CSS, JavaScript (React), Next.js, and Vue to create an engaging user experience.
+Snake Case Name is a simple snake game for beginners. It uses HTML, CSS, and JavaScript to create an engaging user experience.
 
 ## Tech Stack
 
-- **Frontend**: React + Next.js or Vue
-- **Backend**: Node.js with Express or FastAPI
-- **Database**: PostgreSQL
-- **Auth**: Supabase for authentication
-- **Payments**: None
-- **Realtime**: True (for in-game events)
+- Frontend: HTML/CSS/JavaScript
+- Backend: None (no specific backend required)
+- Database: Supabase
+- Auth: Supabase
+- Payments: Not applicable in this project
+- Realtime: False
 
 ## Architecture Overview
 
-![SnakeCaseName Architecture](https://github.com/yourusername/SnakeCaseName/blob/main/images/architecture.png?raw=true "SnakeCaseName Architecture")
+The architecture of Snake Case Name is a simple game with the following components:
+
+1. **HTML/CSS**: The user interface for playing the game.
+2. **JavaScript (ES6+)**: Handles logic and rendering, including snake movement and food spawning.
 
 ## API Endpoints
 
-The following endpoints are provided:
+- GET `/api/endpoint`: Returns all endpoints of Snake Case Name
+  - Request Body: None
+  - Response: JSON with a list of available endpoints
 
-1. GET `/api/v1/status` - Returns the current game status.
-2. POST `/api/v1/start-game` - Starts a new game session.
+## ENV Variables
 
-## Environment Variables
-- **DB_URL**: The database URL for PostgreSQL (e.g., `postgresql://user:password@localhost/dbname`)
-  DB_URL: postgresql://postgres:CnGVG9DT7hp3zEwgknG3@db.jnpqxwkzlqvbmazywyie.supabase.co:5432/postgres
-- **JWT_SECRET**: A secret key for JWT authentication (e.g., `secret_key`)
-  JWT_SECRET: secret_key
+- DB_URL: URL to connect to the database (e.g., `postgresql://user:password@localhost/dbname`)
+- JWT_SECRET: Secret key for generating secure tokens in Supabase
 
-## Local Setup
+## Local Setup Instructions
 
-1. Clone the repository using Git:
-git clone https://github.com/yourusername/SnakeCaseName.git
-2. Install dependencies with npm or yarn:
+1. Clone this repository from GitHub.
+2. Install Node.js and npm if not already installed on your system.
+3. Create a new directory to work with the project:
+mkdir snake-case-name
+cd snake-case-name
 
-   cd SnakeCaseName
-   npm install
+4. Initialize a new Node.js project using `npm init`:
 
-3. Start development server:
-   npm start
+   npx create-react-app react-snakelobby --template typescript
+   cd react-snakelobby
+   npm install @supabase/supabase-js
 
-4. Navigate to `http://localhost:3000` in your browser.
+5. Configure Supabase in the `.env.example` file:
+DB_URL=postgresql://user:password@localhost/dbname
+JWT_SECRET=mysecretkey
+6. Start your local development server with `npm start`.
+7. Open a web browser and navigate to http://localhost:3000.
 
 ## Deploy Instructions
 
-1. **Vercel Setup**: If using Vercel, follow the instructions provided by their documentation.
-2. **Deployment URLs**:
+- For deployment, you can use Docker or AWS Elastic Beanstalk.
+  - **Docker**: Build the container using `docker-compose.yml` in this project directory:
+    docker-compose up
 
-- Frontend: <https://snakecasename.vercel.app>
-- Backend (not deployed yet): `Not deployed yet`
-
-Note:
-- Ensure you have a working internet connection and that your development environment is set up correctly before deploying.
+  - **AWS Elastic Beanstalk**: Create a new application and deploy your code to an Amazon EC2 instance.
 
 ## File Structure
 
-The project structure includes the following files:
+- src: Contains all source files for the game.
+- public: Static assets like images, stylesheets, etc. are stored here.
+- .env.example: Environment variables used in development.
+- README.md: Project documentation and setup instructions.
+- docker-compose.yml (optional): Local development setup if using Docker.
 
-1. **.github/workflows/ci.yml**: GitHub Actions CI/CD pipeline
-2. **README.md** (Project documentation)
-3. **.env.example** (Environment variable template)
-4. **.gitignore**
-5. **relative/path/file.ext** - What this file does in one sentence
+## Known Issues
+
+1. **Error: "Invalid YAML: while scanning a simple key
+  in "<unicode string>", line 33, colu" → Fix: Fixed on attempt 4: Invalid YAML: while scanning a simple key
+  in "<unicode string>", line 33, column 20**:
+   - This error occurs when trying to parse the JSON response from an API call. It's fixed by adding `response_body` parameter with empty value.
+- **Error: "Invalid YAML: while scanning a simple key
+  in "<unicode string>", line 18, colu" → Fix: Fixed on attempt 1: Invalid YAML: while scanning a simple key
+  in "<unicode string>", line 18, column 20**:
+   - This error occurs when trying to parse the JSON response from an API call. It's fixed by adding `response_body` parameter with empty value.
 
 ## Conclusion
 
-SnakeCaseName is a simple snake game built for the landing page, using React and Next.js or Vue to create an engaging user experience.
-
-For more information on how to run locally or deploy your project, refer to our documentation at <https://snakecasename.vercel.app>.
+Snake Case Name is a fun and engaging game for beginners that can be played on your local machine or deployed using Docker or AWS Elastic Beanstalk.
+Please note, this project does not include any backend services like database operations or real-time updates.
