@@ -1,8 +1,3 @@
-The error message indicates that there is a syntax issue in the YAML file. Specifically, it's pointing to line 1 column 1 of the `<unicode string>` where the character '`' cannot start any token.
-
-To fix this error and ensure proper parsing, we need to correct the YAML structure by ensuring all tokens are properly terminated with a newline (`\n`). Here is the corrected version:
-
-```yaml
 name: CI/CD
 
 on:
@@ -20,6 +15,5 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t my-app .
-```
 
 This version of the YAML file should be valid and properly parsed by a YAML parser.
