@@ -15,5 +15,4 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t my-app .
-
 This version of the YAML file should be valid and properly parsed by a YAML parser.
