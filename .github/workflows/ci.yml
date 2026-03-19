@@ -1,27 +1,83 @@
-name: CI
+name: CI/CD
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+    # The following are the PRs that trigger this workflow.
+    # You can add more than one by separating them with a space.
+    # e.g. "main master"
+    # Also, you can use '*' to match all PRs on your branch or 'master' for default behavior.
+
   pull_request:
-    branches: ["main"]
+    branches: [ main ]
 
 jobs:
-  build:
+
+  linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v2
         with:
-          node-version: "20"
-      - uses: actions/setup-python@v5
+          # Fetch the latest version of node.js from npm.
+          fetch-prerelease: true
+
+      - name: Node Version
+        run: |
+          curl https://raw.githubusercontent.com/nrwl/lerna/master/scripts/install.sh | sh
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
         with:
-          python-version: "3.11"
-      - name: Install deps
+          # Fetch the latest version of node.js from npm.
+          fetch-prerelease: true
+
+      - name: Node Version
         run: |
-          if [ -f package.json ]; then npm ci || npm install; fi
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Run tests
+          curl https://raw.githubusercontent.com/nrwl/lerna/master/scripts/install.sh | sh
+
+  build-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      # This action will install the Docker CLI and pull a pre-built image from the registry.
+      - name: Install Docker
         run: |
-          if [ -f package.json ]; then npm test --if-present; fi
-          if [ -f requirements.txt ]; then python -m pytest -q || true; fi
+          curl https://get.docker.com/ | sh
+
+      # Build the Docker image using the latest version of node.js as the base image.
+      - name: Build Docker Image
+        env:
+          DOCKER_IMAGE_TAG: main
+        run: docker build --tag snakecasename .
+
+  deploy-frontend-to-vercel:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.ref == 'main' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # This action will install the Vercel CLI and deploy your app to Vercel.
+      - name: Deploy To Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          vercel --token $VERCEL_TOKEN --service-id $RENDER_SERVICE_ID build
+
+  deploy-backend-to-render:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.ref == 'main' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # This action will install the Render CLI and deploy your app to Render.
+      - name: Deploy To Render
+        env:
+          RENDER_TOKEN: ${{ secrets.RENDER_TOKEN }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          render --token $RENDER_TOKEN build
